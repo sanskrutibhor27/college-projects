@@ -1,0 +1,94 @@
+<?php
+$words = ['code','java','python','algorithm','debug','php','function','strings','array'];
+
+$jumbledWord = $words[array_rand($words)];
+$originalWord = $jumbledWord; // store the original word
+$jumbledWord = str_shuffle($jumbledWord);
+?>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color:#ADD8E6;
+        background-image: linear-gradient( #C7395F, #DED4E8, #E8BA40
+);
+    }
+    .game-container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 5px solid  #e75480;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .jumbled-word {
+        font-size: 24px;
+        font-weight: bold;
+        color: #AA336A;
+        margin-bottom: 30px;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .form-input {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 18px;
+        border: 1px solid #AA336A;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .submit-btn {
+        background-color:#AA336A ;
+        color: #FFFF;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .submit-btn:hover {
+        background-color: #AA336A;
+    }
+    .result {
+        font-size: 24px;
+        font-weight: bold;
+        color: #AA336A;
+        margin-top: 20px;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    /* added animation */
+    .game-container {
+        animation: fade-in 2s;
+    }
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<div class="game-container">
+    <p class="jumbled-word">Guess the word: <?php echo $jumbledWord; ?></p>
+    <form action="ex1.php" method="post">
+        <input type="text" name="answer" placeholder="Enter your answer" class="form-input">
+        <input type="hidden" name="originalWord" value="<?php echo $originalWord; ?>">
+        <input type="submit" value="Submit" class="submit-btn">
+    </form>
+
+    <?php if (isset($_POST['answer'])): ?>
+        <?php $answer = $_POST['answer']; ?>
+        <?php $originalWord = $_POST['originalWord']; ?>
+
+        <?php if (strtolower($answer) == strtolower($originalWord)): ?>
+            <p class="result">Congratulations! you are correct!!</p>
+        <?php else: ?>
+            <p class="result">Oops! try a different word</p>
+        <?php endif; ?>
+    <?php endif; ?>
+</div>
