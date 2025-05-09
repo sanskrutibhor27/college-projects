@@ -2,9 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Artiq.it - Products</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #ffc0cb;
+      font-family: Arial, sans-serif;
+    }
+
+    .products {
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .product-list {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .product-card h1, .product-card h3 {
+      max-width: 300px;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      font-weight: bold;
+    }
+
+    /* Responsive layout for larger screens */
+    @media (min-width: 768px) {
+      .product-card {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        gap: 30px;
+      }
+
+      .product-card:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .product-card h1, .product-card h3 {
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,72 +88,81 @@
       </div>
     </nav>
   </header>
-<body style="background-color:#ffc0cb">
-  <section class="products" style="margin-bottom:1300px">
+
+  <section class="products">
     <h2>Featured Products</h2>
     <div class="product-list">
 
       <div class="product-card">
-        <img src="images/o1.jpg" alt="frames" align=left height=300px width=300px style="margin-left:200px" >
- <h1 style="margin-left:200px; width:300px; text-align:center;">Cute polaroids in small , medium and large sizes </h1>
- <h3 style="margin-left:200px; width:300px; text-align:center;">Starts at just 10/- </h3>
-</div>
-     
-      <div class="product-card">
-
-        <img src="images/f1.jpg" alt="Custom phonecover" align=right height=300px width=300px style="margin-right:200px; margin-top:-420px ">
-  <h1 style="float: right; margin-right: 200px; margin-top:-100px; width: 300px; text-align: center;">Customized Popup Frames</h1>
-  <h3 style="float: right; margin-right: 200px; margin-top:-60px; width: 300px; text-align: center;">Starts at just 399/-</h3>
-
-   
+        <img src="images/o1.jpg" alt="Polaroids">
+        <div>
+          <h1>Cute Polaroids</h1>
+          <h3>Starts at just ₹10</h3>
+        </div>
       </div>
+
       <div class="product-card">
-
-        <img src="images/p2.jpg" alt="bracelets" align=left height=300px width=300px style="margin-left:200px ; margin-top:20px">
-<h1 style="float: left; margin-left:-300px; margin-top:330px; width: 300px; text-align: center;">Customized PhoneCovers</h1>
-<h3 style="float: left; margin-left:-300px; margin-top:370px; width: 300px; text-align: center;">Starts at just 249/-</h3>
-
-             </div>
-      <div class="product-card">
-
-        <img src="images/c1.jpg" alt="bouquet" align=right height=300px width=300px style="margin-right:200px ; margin-top:20px" >
-<h1 style="float: right; margin-right: 200px; margin-top: 10px; text-align: center; width: 300px;">Aesthetic Phone Charms</h1>
-<h3 style="float: right; margin-right: -300px; margin-top: 50px; text-align: center; width: 300px;">Starts at just 169/-</h3>
+        <img src="images/f1.jpg" alt="Popup Frames">
+        <div>
+          <h1>Customized Popup Frames</h1>
+          <h3>Starts at just ₹399</h3>
+        </div>
       </div>
+
       <div class="product-card">
-
-        <img src="images/b1.jpg" alt="Medium Polaroid"  align=left height=300px width=300px style="margin-left:200px ; margin-top:120px">
-<h1 style="float: right; margin-right: 700px; margin-top: 5px; text-align: center; width: 300px;"> Cute and Customized Bracelets</h1>
-<h3 style="float: right; margin-right: 700px; margin-top: -8px; text-align: center; width: 300px;"> Starts at just 89/-</h3> 
-            </div>
-      <div class="product-card">
-
-        <img src="images/h1.jpg" alt="Large Polaroid"  align=right height=300px width=300px style="margin-right:200px ; margin-top:-415px">
-<h1 style="float: right; margin-right: 200px; margin-top: -110px; text-align: center; width: 300px;">Gift Hampers</h1>
-<h3 style="float: right; margin-right: 200px; margin-top: -70px; text-align: center; width: 300px;"> Starts at just 499/-</h3>
-
-  </div>
-      <div class="product-card">
-
-        <img src="images/r1.jpg" alt="Large Polaroid"  align=left height=300px width=300px style="margin-left:200px ; margin-top:20px">
- <h1 style="float: right; margin-right: 680px; margin-top: -0px; text-align: center; width: 300px;">Customized Ribbon Flower Bouquet</h1>
- <h3 style="float: right; margin-right: 680px; margin-top: -8px; text-align: center; width: 300px;">Starts at just 299/-</h3> 
-
-  </div>
-      <div class="product-card">
-
-        <img src="images/s1.jpg" alt="Large Polaroid"  align=right height=300px width=300px style="margin-right:200px ; margin-top:-410px">
- <h1 style="float: right; margin-right: 250px; margin-top: -110px; text-align: center;">Cute Scrunchies</h1>
- <h3 style="float: right; margin-right: 260px; margin-top: -70px; text-align: center;">Starts at just 29/-</h3>
-
+        <img src="images/p2.jpg" alt="Phone Covers">
+        <div>
+          <h1>Customized Phone Covers</h1>
+          <h3>Starts at just ₹249</h3>
+        </div>
       </div>
+
+      <div class="product-card">
+        <img src="images/c1.jpg" alt="Phone Charms">
+        <div>
+          <h1>Aesthetic Phone Charms</h1>
+          <h3>Starts at just ₹169</h3>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/b1.jpg" alt="Bracelets">
+        <div>
+          <h1>Cute & Customized Bracelets</h1>
+          <h3>Starts at just ₹89</h3>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/h1.jpg" alt="Gift Hampers">
+        <div>
+          <h1>Gift Hampers</h1>
+          <h3>Starts at just ₹499</h3>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/r1.jpg" alt="Bouquets">
+        <div>
+          <h1>Ribbon Flower Bouquets</h1>
+          <h3>Starts at just ₹299</h3>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/s1.jpg" alt="Scrunchies">
+        <div>
+          <h1>Cute Scrunchies</h1>
+          <h3>Starts at just ₹29</h3>
+        </div>
+      </div>
+
     </div>
   </section>
-</body>
+
   <footer>
-    <p>Artiq.it | Follow us on instagram:
-      <a href="https://instagram.com/artiq.it" target="_blank">@artiq.it</a>
-    </p>
+    Artiq.it | Follow us on Instagram: 
+    <a href="https://instagram.com/artiq.it" target="_blank">@artiq.it</a>
   </footer>
 </body>
 </html>
