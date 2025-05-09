@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artiq.it - Order</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<base href="http://localhost:8080/artiq/">
+
+<body>
+  <header>
+    <div class="logo">🎁 Artiq.it</div>
+    <nav>
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="product.html">Products</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="order.html">Order</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="order">
+    <h1 style="color:#ff1493" align="center">Place Your Order</h1>
+    <form action="submit_order.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="product" placeholder="Product Type" required />
+      <textarea name="customization" placeholder="Customization Details" required></textarea>
+      <button type="submit" style="background-color: #ff1493; color: white; border: none; padding: 10px 10px; border-radius: 50px; font-size: 16px; cursor: pointer">Submit Order</button>
+    </form>
+
+    <p style="color:#ff1493" align="center">Or DM us on: <a href="https://instagram.com/artiq.it" target="_blank">@artiq.it</a></p>
+  </section>
+
+  <footer>
+    <p>Artiq.it | Follow us on instagram: 
+      <a href="https://instagram.com/artiq.it" target="_blank">@artiq.it</a>
+    </p>
+  </footer>
+</body>
+</html>
